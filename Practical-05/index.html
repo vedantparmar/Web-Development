@@ -1,0 +1,38 @@
+<!--
+5 JavaScript 
+1. Basic JS Practical: script tags, alerts, documents, functions, arrays, loops, and 
+conditions 
+2. Advanced JS Practical: Objects, DOM references: getElementById, InnerHTML etc.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic JavaScript Practical</title>
+</head>
+<body>
+<h1>JavaScript Basics</h1>
+<p id="output"></p>
+<script>
+alert("Welcome to Basic JavaScript!");
+
+function greetUser(name){ return "Hello, "+ name +"!";
+}
+
+let userName=prompt("Enter your name:"); document.getElementById('output').innerHTML=greetUser(userName
+);
+
+let numbers=[1,2,3,4,5];
+
+for(let i=0;i<numbers.length;i++){ console.log("Number: "+numbers[i]);
+}
+
+if(numbers.length>3){
+console.log("The array has more than 3 elements.");
+}else{
+console.log("The array has 3 or fewer element.");
+}
+</script>
+</body>
+</html>

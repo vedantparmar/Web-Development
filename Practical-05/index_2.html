@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript Practical</title>
+</head>
+
+<body>
+
+
+    <h1>Advanced JavaScript DOM Manipulation</h1>
+
+
+    <div id="person-info">
+        <p id="name"></p>
+        <p id="age"></p>
+        <p id="location"></p>
+    </div>
+
+
+    <button onclick="updatePerson()">Update Person Info</button>
+
+
+    <script>
+
+
+        let person = {
+            name: "Vedant Parmar", age: 20,
+            location: "VERAVAL"
+        };
+
+
+        function updatePerson() {
+            document.getElementById('name').innerHTML = "Name: " + person.name; document.getElementById('age').innerHTML = "Age: " + person.age;
+            document.getElementById('location').innerHTML = "Location: " + person.location;
+        }
+    </script>
+
+
+</body>
+
+</html>

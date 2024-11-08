@@ -1,0 +1,96 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+#MyID {
+    background-color: red;
+    background-image: linear-gradient(red, yellow);
+    font-size: 36px;
+    text-align: center;
+    border: 2px solid black;
+    /* padding: 10px 10px; */
+}
+
+.MyClass {
+    background-color: aquamarine;
+    padding: 10px 10px;
+}
+
+.shadow {
+    text-shadow: 2px 2px;
+}
+
+
+div.a {
+    writing-mode: sideways-lr;
+    text-orientation: mixed;
+    background-color: aqua;
+    border: 2px solid black;
+    height: 350px;
+    width: 300px;
+    margin: 5px;
+}
+
+div.b {
+    writing-mode: vertical-lr;
+    /*most imp */
+    text-orientation: upright;
+    /*most imp */
+    background-color: aqua;
+    border: 2px solid black;
+    height: 350px;
+    width: 300px;
+    margin: 5px;
+}
+
+.Transform1 {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    transform: rotate(20deg);
+}
+
+.Transform2 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transform: skewX(1.5);
+}
+
+.position {
+    width: 500px;
+    height: 500px;
+    border: solid black 2px;
+    position: sticky;
+}
+
+.x {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    position: absolute;
+    /* left: 0px; top: 0px; */
+}
+
+.y {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    position: absolute;
+
+
+}
+
+.z {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    position: absolute;
+}

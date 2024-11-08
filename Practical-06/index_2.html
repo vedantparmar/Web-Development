@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, scale=1.0">
+    <title>Form Validation with Regular Expressions</title>
+</head>
+
+<body>
+    <h1>Form Validation</h1>
+    <form id="registration-form" onsubmit="return validateForm()">
+        <label for="username">Username (alphanumeric, characters):</label><br>
+        <input type="text" id="username"><br><br>
+        <label for="email">Email (example@domain.com):</label><br>
+        <input type="email" id="email"><br><br>
+        <label for="password">Password (at characters):</label><br>
+        <input type="password" id="password"><br><br>
+        <input type="submit" value="Register">
+    </form>
+
+    <p id="error-message" style="color: red;"></p>
+
+    <script>
+        function validateForm() {
+            let username = document.getElementById('username').value; let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value; let errorMessage = document.getElementById('error-message');
+            errorMessage.innerHTML = "";
+
+            // Regular Expressions for validation
+            let usernameRegex = /^[a-zA-Z0-9]{5,12}$/;
+            let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; let passwordRegex = /^.{6,}$/;
+
+            // Username validation
+            if (!usernameRegex.test(username)) {
+                errorMessage.innerHTML += "Invalid username.<br>"; return false;
+            }
+
+            // Email validation
+            if (!emailRegex.test(email)) {
+                errorMessage.innerHTML += "Invalid email format.<br>"; return false;
+            }
+
+            // Password validation
+            if (!passwordRegex.test(password)) {
+                errorMessage.innerHTML += "Password must be at least 6 characters long.<br>";
+                return false;
+            }
+
+            alert("Form submitted successfully!"); return true;
+        }
+    </script>
+</body>
+
+</html>

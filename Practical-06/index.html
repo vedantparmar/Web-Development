@@ -1,0 +1,67 @@
+<!--
+6 JavaScript and Event Listeners  
+1. Listeners and JavaScript Practical: Mouse motion, movement, keyboard. 
+2. Perform Regular Expressions and validation using JavaScript. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Listeners</title>
+    <style>
+        #mouse-box {
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            border: 2px solid black;
+            margin: 20px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        #key-box {
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Event Listeners</h1>
+
+
+    <div id="mouse-box">Move your mouse here!</div>
+    <p id="mouse-output">Mouse position will be shown here</p>
+
+
+    <input type="text" id="key-box" placeholder="Type something...">
+    <p id="key-output">Typed key will appear here</p>
+
+
+    <script>
+        // Mouse movement event listener
+        const mouseBox = document.getElementById('mouse-box');
+        const mouseOutput = document.getElementById('mouse-output');
+
+        mouseBox.addEventListener('mousemove', function (event) {
+            mouseOutput.innerHTML = `Mouse X: ${event.clientX}, Mouse Y: ${event.clientY}`;
+        });
+
+
+        // Keyboard event listener
+        const keyBox = document.getElementById('key-box');
+        const keyOutput = document.getElementById('key-output');
+
+        keyBox.addEventListener('keydown', function (event) {
+            keyOutput.innerHTML = `You pressed: ${event.key}`;
+        });
+    </script>
+
+
+</body>
+
+</html>
